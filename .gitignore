@@ -1,2 +1,11 @@
 # deps
 node_modules/
+
+# production
+/build
+
+# local env files
+.env*
+
+# vercel
+.vercel
