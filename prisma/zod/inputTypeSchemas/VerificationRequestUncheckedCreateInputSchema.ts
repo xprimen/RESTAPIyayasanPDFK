@@ -1,0 +1,14 @@
+import type { Prisma } from '@prisma/client';
+
+import { z } from 'zod';
+
+export const VerificationRequestUncheckedCreateInputSchema: z.ZodType<Prisma.VerificationRequestUncheckedCreateInput> = z.object({
+  id: z.number().int().optional(),
+  identifier: z.string(),
+  token: z.string(),
+  expires: z.coerce.date(),
+  createdAt: z.coerce.date().optional(),
+  updatedAt: z.coerce.date().optional()
+}).strict();
+
+export default VerificationRequestUncheckedCreateInputSchema;
